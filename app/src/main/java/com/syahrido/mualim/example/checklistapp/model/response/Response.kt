@@ -2,7 +2,7 @@ package com.syahrido.mualim.example.checklistapp.model.response
 
 import com.google.gson.annotations.SerializedName
 
-data class Response(
+data class Response<T>(
 
     @field:SerializedName("statusCode")
     val statusCode: Int? = null,
@@ -14,5 +14,5 @@ data class Response(
     val errorMessage: Any? = null,
 
     @field:SerializedName("data")
-    val data: DataToken? = null
+    val data: T? = null
 )
